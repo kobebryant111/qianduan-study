@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>金融下午茶</title>
+</head>
+<style>
+    .div1{
+        background: url('timg3.png');
+        background-size: 100% 100%;
+        margin: 0 auto;
+        width: 300px;
+        height: 550px;
+        /* 主要是为了form1中的margin的设置 */
+        padding: 1px;
+    }
+    .div2{
+        background:url('timg4.png');
+        background-size: 100% 100%;
+        margin:0 0;
+        width: 64px;
+        height: 116px;
+    }
+    .form1{
+        border: 3px solid #fcf8ef;
+        width:240px;
+        height:254px;
+        text-align: center;
+
+        margin:25px 30px;
+        padding-top: 20px;
+    }
+    .input1{
+        border: 1px solid #999999;
+        border-top: 2px solid #999999;
+        background-color: #fcf8ef;
+        padding:10px;
+        margin:10px;
+        outline: none;
+    }
+    .input2{
+        display: inline-block;
+    }
+    .submit{
+        background-color: red;
+        margin: 10px;
+        padding: 5px;
+        border: none;
+        width: 140px;
+    }
+</style>
+
+<script>
+    function validate_form(param){
+        var product = document.getElementsByName("product")[0].value;
+        var phone = document.getElementsByName("phone")[0].value;
+        var people = document.getElementsByName("people")[0].value;
+        if(product.length>20){
+            alert("预约产品限制长度为20");
+            return false;
+        }
+        if(phone.length==11){
+            if(phone.charAt(0)!="1"){
+                alert("首位为1")
+                return false;
+            }
+        }else{
+            alert("手机号位数为11位");
+            return false;
+        }
+        if(people.length>20){
+            alert("姓名字段控制长度为20");
+            return false;
+        }
+        alert("预约成功");
+        return true;
+    }
+</script>
+<body>
+    <div class="div1">
+        <div class="div2"></div>
+        <form class="form1" method="POST" action="" onsubmit="return validate_form(this);">
+            <input type="text" class="input1" name="product" value="" required placeholder="预约产品"><br>
+            <input type="text" class="input1" name="phone" value="" required placeholder="联系方式"><br>
+            <input type="text" class="input1" name="people" value="" required placeholder="联系人"><br>
+            有无我行借记卡
+            <input type="radio" class="input2" name="card">有
+            <input type="radio" class="input2" name="card">无<br>
+            <input type="submit" class="submit" value="立即预约">
+        </form>
+    </div>
+</body>
+</html>
