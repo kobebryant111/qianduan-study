@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立即申请</title>
+</head>
+<style>
+    body{
+        background: url('bg.jpg');
+        background-size: 142% 166%;
+    }
+    .div1{
+        margin-top: 100px;
+        margin-right: 20px;
+        width: 650px;
+        height: 400px;
+        text-align: center;
+        padding: 1px;
+    }
+    .div2{
+        display:inline-block;
+        text-align: right;
+        padding: 10px;
+        width: 600px;
+    }
+    .div3{
+        background: url('timg6.jpg');
+        background-size: 100% 100%;
+        margin-top: -38px;
+        margin-left: 600px;
+        width: 81px;
+        height: 28px;
+    }
+    .input1{
+        padding: 5px;
+        margin: 15px;
+        width: 300px;
+        border-radius: 10px;
+        border: none;
+    }
+    .label1{
+        margin-top: 10px;
+        margin-right: -187px;
+        text-align: right;
+    }
+    .submit1{
+        background-color: crimson;
+        padding: 10px;
+        width: 166px;
+        height: 46px;
+        margin-top: 20px;
+        margin-right: -196px;
+        border: none;
+        border-radius: 10px;
+        color: white;
+    }
+    .p1{
+        font-size: small;
+        margin-left: 176px;
+    }
+</style>
+<body>
+    <div class="div1">
+        <form>
+            <div class="div2">
+            真实姓名：<input class="input1" type="text" name="name" value=""><br>
+            二代身份证号码：<input class="input1" type="text" name="number" value="" placeholder="请输入二代身份证，当前仅支持二代身份证"><br>
+            绑定手机号：<input class="input1" type="text" name="phone1" value=""><br>
+            推荐人手机号(可选)：<input class="input1" type="text" name="phone2" value=""><br>
+            图片验证码：<input class="input1" type="text" name="yanzhen" value="" placeholder="不区分大小写">
+            <div class="div3"></div>
+            </div>
+            <br>
+            <label class="label1"><input name="choose" type="checkbox" value="">我已全部阅读并同意遵守<span style="color: crimson;">《宁波银行电子账户开户须知》</span>以及<span style="color: crimson;">《扣款协议》</span></label><br>
+            <input class="submit1" type="submit" name="submit" value="立即申请"><br>
+            <p class="p1">温馨提示：请使用IE8及以上版本浏览器</p>
+        </form>
+    </div>
+</body>
+</html>
